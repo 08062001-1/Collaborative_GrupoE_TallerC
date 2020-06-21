@@ -1,0 +1,3 @@
+/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/CMakeFiles/ProbandoRepositorio.dir
+/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/CMakeFiles/edit_cache.dir

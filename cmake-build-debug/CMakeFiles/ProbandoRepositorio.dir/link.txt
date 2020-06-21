@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/ProbandoRepositorio.dir/main.c.o  -o ProbandoRepositorio.exe -Wl,--out-implib,libProbandoRepositorio.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
