@@ -14,8 +14,87 @@ int sortDescending(int numbers[], int tamano);
 int sortAscending(int numbers[], int tamano);
 int convertVector(int numbers[], int tamano);
 int isMagicNumber(int numberD, int numberA, int number);
+//SUMA DE DIGITOS - Metodo Iniciales
+void sumDigits();
+void calculateSumDigits(int iniInterval, int endInterval, int exclusiveDigit);
 
-//metodos MAGICOS
+//RESULTADOS DE PRUEBA
+void test();
+int calculateTest(char* chain);
+
+//Metodos Resultado prueba
+void test (){
+    char* chain;
+    printf("Por favor dijite la cadena:\n");
+    fgets(&chain, 30, stdin);
+
+    printf("El resultado de la prueba dada es: %d",calculateTest(&chain));
+    getchar();
+
+}
+
+int calculateTest(char* chain){
+    int contX, contO, sumaO=0, suma=0;
+    char digitC;
+    for(int i=0; i<strlen(chain)-1; i++){
+        digitC=chain[i];
+        digitC=toupper(digitC);
+        if(digitC=='O'){
+            sumaO++;
+        }else if(digitC=='X'){
+            sumaO=0;
+        }
+        suma+=sumaO;
+    }
+    // printf("Resultado Pruba: %d", suma);
+    return suma;
+}
+//termian metodos Resulatdo prueba
+
+
+
+//SUMA DE DIGITOS
+void sumDigits(){
+    int iniInterval=0;
+    int endInterval=0;
+    int exclusiveDigit=0;
+    printf("Suma de digitos\n");
+    printf("Digite el intervalo de Inicio:\n");
+    scanf("%d", &iniInterval);
+    printf("Digite el intervalo Final:\n");
+    scanf("%d", &endInterval);
+    printf("Digite el numero que desea excluir:\n");
+    scanf("%d", &exclusiveDigit);
+    fflush(stdin);
+
+    //calculateSumDigits(iniInterval, endInterval, exclusiveDigit);
+    iniInterval<=endInterval?calculateSumDigits(iniInterval, endInterval, exclusiveDigit):printf("Lo siento el Intervalo Inicial debe ser menor");
+getchar();
+}
+
+void calculateSumDigits(int iniInterval, int endInterval, int exclusiveDigit){
+    char* numberC;
+    int cont=0, suma=0;
+    for(int i=iniInterval; i<=endInterval; i++){
+        sprintf(numberC, "%d", i);
+        for(int j=0; strlen(numberC)>j; j++){
+            int chainConv = numberC[j] - '0';
+            if(chainConv==exclusiveDigit){
+                cont++;
+            }else{
+                suma+=chainConv;
+            }
+        }
+    }
+
+
+    printf("\nLos intervalos %d y %d sin tener en cuenta el %d, la suma sería %d y no se tuvieron en cuenta %d digitos\n",
+           iniInterval, endInterval, exclusiveDigit, suma, cont );
+}
+
+//termina metodos suma de digitos
+
+//metodos Numeros MAGICOS
 void magicalNumber() {
     int number;
     int numbers[100];
@@ -125,7 +204,6 @@ void calculateCousinNumbers(int number) {
         }
     }
     printf("\n");
-    getchar();
 }
 
 int isCousing(int number) {
@@ -139,38 +217,21 @@ int isCousing(int number) {
 }
 //terminar metodos primos
 
-void calcPrimeNumbers(){
-    printf("Selecciono la opcion 1\n");
-    getchar();
-}
 
 void calcEgotisticalNumber(){
     printf("Selecciono la opcion 2\n");
     getchar();
 }
 
-void calcMagicNumber(){
-    printf("Selecciono la opcion 3\n");
-    getchar();
-}
 
 void calcIMC(){
     printf("Selecciono la opcion 4\n");
     getchar();
 }
 
-void calcSumOfDigits(){
-    printf("Selecciono la opcion 5\n");
-    getchar();
-}
 
 void calcFibonacciSequence(){
     printf("Selecciono la opcion 6\n");
-    getchar();
-}
-
-void calcTestScore(){
-    printf("Selecciono la opcion 7\n");
     getchar();
 }
 
@@ -213,7 +274,7 @@ void mainMenu(){
                 break;
 
             case 5:
-                calcSumOfDigits();
+                sumDigits();
                 break;
 
             case 6:
@@ -221,7 +282,7 @@ void mainMenu(){
                 break;
 
             case 7:
-                calcTestScore();
+                test();
                 break;
 
             case 8:
