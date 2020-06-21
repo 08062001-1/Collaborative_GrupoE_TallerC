@@ -3,11 +3,105 @@
 #include <string.h>
 #include <ctype.h>
 //Inicialización de metodos
+//NUMEROS PRIMOS
 void cousinNumbers();
 void calculateCousinNumbers(int);
 int isCousing(int);
+//NUMEROS MAGICOS
+void magicalNumber();
+void vector(int numbers[], char chain[], int tamano);
+int sortDescending(int numbers[], int tamano);
+int sortAscending(int numbers[], int tamano);
+int convertVector(int numbers[], int tamano);
+int isMagicNumber(int numberD, int numberA, int number);
 
-//metodos
+//metodos MAGICOS
+void magicalNumber() {
+    int number;
+    int numbers[100];
+
+    printf("Calcular si el Numero es Magico\n");
+    printf("Digite el valor \n");
+    scanf("%d", &number);
+
+    char chain[100];
+    sprintf(chain, "%d", number);
+    int tamano=strlen(chain);
+
+    vector(numbers, chain, tamano); //Agregar los digitos del número en un vector
+    //Ordena los digitos del vector, lo vueve a convertir en cadena luego en numero y los resta
+    if(isMagicNumber(sortDescending(numbers, tamano),sortAscending(numbers, tamano), number)){
+        printf("El numero %d es un Número Magico\n", number);
+    }else{
+        printf("El numero %d No es un Número Magico\n", number);
+    }
+    getchar();
+
+}
+
+int isMagicNumber(int numberD, int numberA, int number){
+    if((numberD-numberA)==number){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+int convertVector(int numbers[], int tamano){
+    char cadena[30]="";
+
+    for(int i=0; i<tamano; i++){
+        numbers[i];
+        char convNum[10];
+        sprintf(convNum, "%d", numbers[i]);
+        strcat(cadena, convNum);
+    }
+    //  printf("%s\n",  cadena);
+    int num = atoi(cadena);
+
+    return num;
+}
+
+void vector(int numbers[], char chain[], int tamano){
+    // printf("vector  \n");
+    for (int i = 0; i <= tamano - 1; i++) {
+        // printf("%c\t", chain[i]);
+        int num = chain[i] - '0';
+        numbers[i] = num;
+        // printf("%d\t", numbers[i]);
+    }
+}
+
+int sortAscending(int number[], int tamano) {
+    //printf("ordenar \n");
+    for (int i = 0; i < tamano - 1; i++) {
+        for (int j = i + 1; j < tamano; j++) {
+            if (number[j] < number[i]) {
+                int aux = number[j];
+                number[j] = number[i];
+                number[i] = aux;
+            }
+        }
+    }
+    return convertVector(number, tamano);;
+}
+
+int sortDescending(int numberA[], int tamano){
+    // printf("ordenar \n");
+    for (int i = 0; i < tamano-1; i++){
+        for (int j = i + 1; j < tamano; j++){
+            if(numberA[j]>numberA[i]){
+                int aux= numberA[j];
+                numberA[j]=numberA[i];
+                numberA[i]= aux;
+            }
+        }
+    }
+
+    return convertVector(numberA, tamano);
+}
+
+//metodos primos
 void cousinNumbers() {
     int number;
     printf("Calculate Cousin Numbers \n");
@@ -31,6 +125,7 @@ void calculateCousinNumbers(int number) {
         }
     }
     printf("\n");
+    getchar();
 }
 
 int isCousing(int number) {
@@ -40,6 +135,7 @@ int isCousing(int number) {
         cousing = !( number % cont++ == 0 );
     }
     return cousing;
+    getchar();
 }
 //terminar metodos primos
 
@@ -109,7 +205,7 @@ void mainMenu(){
                 break;
 
             case 3:
-                calcMagicNumber();
+                magicalNumber();
                 break;
 
             case 4:
