@@ -8,76 +8,76 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ProbandoRepositorio">
-				<Option output="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/ProbandoRepositorio.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/ProbandoRepositorio.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProbandoRepositorio"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProbandoRepositorio"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ProbandoRepositorio/fast">
-				<Option output="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/ProbandoRepositorio.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/ProbandoRepositorio.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/include"/>
 					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProbandoRepositorio/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 ProbandoRepositorio/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/main.c">
+		<Unit filename="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/main.c">
 			<Option target="ProbandoRepositorio"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/CMakeLists.txt">
+		<Unit filename="/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

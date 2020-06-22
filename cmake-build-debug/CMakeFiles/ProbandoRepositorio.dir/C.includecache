@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/usuario/CLionProjects/ProbandoRepositorio/main.c
+/cygdrive/c/Users/tania/CLionProjects/Collaborative_GrupoE_TallerC/main.c
 stdio.h
 -
 stdlib.h
