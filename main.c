@@ -2,11 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-/*INICIALIZACION DE METODOS*/
+#include <math.h>
+
+/* INICIALIZACION DE METODOS */
+
 //1.NumerosPrimos
 void cousinNumbers();
 void calculateCousinNumbers(int);
 int isCousing(int);
+
+//2. Numero Ególatra
+void egotisticalNumber();
+int processEgoistcalNumber(int number);
+int isEgoistcalNumber(int number);
 
 //3. Numeros Magicos
 void magicalNumber();
@@ -15,6 +23,11 @@ int sortDescending(int numbers[], int tamano);
 int sortAscending(int numbers[], int tamano);
 int convertVector(int numbers[], int tamano);
 int isMagicNumber(int numberD, int numberA, int number);
+
+//4. Calculo del IMC
+void bodyMassIndex();
+double calculateIMC(int weight, double height);
+char * processIMC(int gender, double IMC);
 
 //5.Suma de Digitos
 void sumDigits();
@@ -58,6 +71,40 @@ int isCousing(int number) {
         cousing = !( number % cont++ == 0 );
     }
     return cousing;
+}
+
+//2. Número Ególatra
+
+void egotisticalNumber() {
+    int number;
+    printf("Calculo de un Numero Egolatra \n");
+    printf("Digite el numero entero a evaluar: \n");
+    scanf("%d",&number);
+
+    if(isEgoistcalNumber( number)){
+        printf("El numero %d es un Ególatra\n", number);
+    }else{
+        printf("El numero %d NO es un Ególatra\n", number);
+    }
+}
+
+int processEgoistcalNumber(int number){
+    int suma, num=0;
+    char chain[100];
+    sprintf(chain, "%d", number);
+
+    for(int i = 0; i <= strlen(chain)-1; i++){
+        num = chain[i] - '0';
+        suma+= pow(num, 3);
+    }
+    return suma;
+}
+
+int isEgoistcalNumber(int number){
+    if(processEgoistcalNumber(number) == number){
+        return 1;
+    }
+    return 0;
 }
 
 //3. Números Magicos
@@ -143,6 +190,72 @@ int sortDescending(int numberA[], int tamano){
     return convertVector(numberA, tamano);
 }
 
+//4. Calculo IMC
+
+void bodyMassIndex(){
+    int weight, gender;
+    double height;
+
+    printf("Calculo del IMC\n");
+    printf("Digite su peso en kg: \n");
+    scanf("%d", &weight);
+    printf("Digite su estatura en cm: \n");
+    scanf("%lf", &height);
+    printf("Digite '1' si es Mujer o '2' si es Hombre: \n");
+    scanf("%d", &gender);
+    printf("Su diagnostico es: %s\n", processIMC(gender, calculateIMC(weight, height)));
+}
+
+char* processIMC (int gender, double IMC){
+
+    switch (gender){
+
+        case 1:
+            if(IMC < 16){
+                return "Desnutrición";
+            } else if ((IMC >= 16) && (IMC <= 20)){
+                return "Bajo Peso";
+            } else if ((IMC > 20) && (IMC <= 24)){
+                return "Normal";
+            } else if ((IMC > 24) && (IMC <= 29)){
+                return "Sobrepeso";
+            }else if((IMC > 29) && (IMC <= 34)){
+                return "Obesidad";
+            }else if((IMC > 34) && (IMC <= 39)){
+                return "Obesidad Marcada";
+            }else if(IMC > 39){
+                return "Obesidad Morbida";
+            }
+            break;
+
+        case 2:
+            if(IMC < 17){
+                return "Desnutricion";
+            } else if ((IMC >= 17) && (IMC <= 20)){
+                return "Bajo Peso";
+            } else if ((IMC > 20) && (IMC <= 25)){
+                return "Normal";
+            } else if ((IMC > 25) && (IMC <= 30)){
+                return "Sobrepeso";
+            }else if((IMC > 30) && (IMC <= 35)){
+                return "Obesidad";
+            }else if((IMC > 35) && (IMC <= 40)){
+                return "Obesidad Marcada";
+            }else if(IMC > 40){
+                return "Obesidad Morbida";
+            }
+            break;
+
+        default:
+            return "ERROR. Opcion no valida, intentelo nuevamente";
+
+    }
+}
+
+double calculateIMC(int weigth, double height){
+    return weigth/(pow((height*0.01),2));
+}
+
 //5.Suma de Digitos
 void sumDigits(){
     int iniInterval=0;
@@ -208,24 +321,11 @@ int calculateTest(char* chain){
     return suma;
 }
 
-
-void calcEgotisticalNumber(){
-    printf("Selecciono la opcion 2\n");
-    getchar();
-}
-
-
-void calcIMC(){
-    printf("Selecciono la opcion 4\n");
-    getchar();
-}
-
-
 void calcFibonacciSequence(){
     printf("Selecciono la opcion 6\n");
     getchar();
 }
-
+/* MENU PRINCIPAL */
 void mainMenu(){
     int option;
     char temp[10];
@@ -253,7 +353,7 @@ void mainMenu(){
                 break;
 
             case 2:
-                calcEgotisticalNumber();
+                egotisticalNumber();
                 break;
 
             case 3:
@@ -261,7 +361,7 @@ void mainMenu(){
                 break;
 
             case 4:
-                calcIMC();
+                bodyMassIndex();
                 break;
 
             case 5:
