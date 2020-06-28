@@ -4,6 +4,8 @@
 #include <ctype.h>
 #include <math.h>
 
+#define TAM 10000
+
 /* INICIALIZACION DE METODOS */
 
 //1.NumerosPrimos
@@ -33,7 +35,11 @@ char * processIMC(int gender, double IMC);
 void sumDigits();
 void calculateSumDigits(int iniInterval, int endInterval, int exclusiveDigit);
 
-//6. Resultados de prueba
+//6. Serie Fibonacci
+void calcFibonacciSerie(int number, char* patron);
+void fibonacciSeries();
+
+//7. Resultados de prueba
 void test();
 int calculateTest(char* chain);
 
@@ -294,7 +300,45 @@ void calculateSumDigits(int iniInterval, int endInterval, int exclusiveDigit){
            iniInterval, endInterval, exclusiveDigit, suma, cont );
 }
 
-//5. Resultados de la prueba
+//6. Serie Fibonacci
+void calcFibonacciSerie(int number, char* patron){
+    char fib0[TAM] = "0";
+    char fib1[TAM] = "1";
+
+    printf("***** SERIE FIBONACCI *****\n");
+    for (int i = 2; i <= number; i++) {
+        char fibNuevo[TAM] = "";
+        strcat(fibNuevo, fib1);
+        strcat(fibNuevo, fib0);
+        strcpy(fib0,fib1);
+        strcpy(fib1,fibNuevo);
+        printf("f(%d) = %s\n", i, fibNuevo);
+    }
+
+    char* secuence = &patron;
+    char* search = NULL;
+
+    int cont = 0;
+    search = strstr(fib1, secuence);
+    while (search != NULL){
+        cont++;
+        search = strstr(search + 1, secuence);
+    }
+    printf("El patron %s esta %i veces en la serie %s\n", secuence, cont, fib1);
+}
+
+void fibonacciSeries(){
+    int number;
+    char* patron;
+    printf("Digite el numero de la Secuencia Fibonacci ha generar: ");
+    scanf("%d", &number);
+    printf("Digite el patron ha buscar: ");
+    scanf("%s", &patron);
+    calcFibonacciSerie(number, patron);
+    getchar();
+}
+
+//7. Resultados de la prueba
 void test (){
     char* chain;
     printf("Por favor dijite la cadena:\n");
@@ -321,10 +365,6 @@ int calculateTest(char* chain){
     return suma;
 }
 
-void calcFibonacciSequence(){
-    printf("Selecciono la opcion 6\n");
-    getchar();
-}
 /* MENU PRINCIPAL */
 void mainMenu(){
     int option;
@@ -369,7 +409,7 @@ void mainMenu(){
                 break;
 
             case 6:
-                calcFibonacciSequence();
+               fibonacciSeries();
                 break;
 
             case 7:
