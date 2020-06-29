@@ -42,32 +42,26 @@ void fibonacciSeries();
 void test();
 int calculateTest(char* chain);
 
-/*METODOS*/
+/*---------- METODOS ----------*/
+
 //1. Números Primos
 bool validationReal( char number[]){
-
     for (int i = 0; i < strlen(number); ++i) {
         if (!(isdigit(number[i]))){
             printf("<----Ingresa solo numeros enteros positivos---->\n");
             return true;
         }
-
     }
-
     return false;
 }
-
 
 int validations(){
     char number [30];
     int valido=0;
     do {
         scanf("%s",number);
-
     }while (validationReal(number)==true);
-
     valido= atoi(number);
-
     return valido;
 }
 
@@ -78,13 +72,9 @@ void cousinNumbers() {
     fflush(stdin);
     number=validations();
     fflush(stdin);
-
-
     printf("Los numeros primos de acuerdo al valor %d, son: \n", number);
     calculateCousinNumbers(number);
     getchar();
-
-
 }
 
 void calculateCousinNumbers(int number) {
@@ -107,8 +97,6 @@ int isCousing(int number) {
 }
 
 //2. Número Ególatra
-
-
 void egotisticalNumber() {
     int number;
     printf("Calculo de un Numero Egolatra \n");
@@ -128,10 +116,9 @@ int processEgoistcalNumber(int number){
     int suma, num=0;
     char chain[100];
     sprintf(chain, "%d", number);
-
     for(int i = 0; i <= strlen(chain)-1; i++){
         num = chain[i] - '0';
-        suma+= pow(num, 3);
+        suma+= pow(num, strlen(chain));
     }
     return suma;
 }
@@ -142,18 +129,15 @@ int isEgoistcalNumber(int number){
     }
     return 0;
 }
+
 //3. Números Magicos
 bool validationRealMagico( char number[]){
-
     for (int i = 0; i < strlen(number); ++i) {
-
         if (!(number[0]==45||number[i]>=48&&number[i]<=57)){
             printf("<----Ingresa solo numeros enteros---->\n");
             return true;
         }
-
     }
-
     return false;
 }
 
@@ -162,15 +146,10 @@ int validationMagico(){
     int valid=0;
     do {
         scanf("%s",number);
-
     }while (validationRealMagico(number)==true);
-
     valid= atoi(number);
-
     return valid;
 }
-
-
 
 void magicalNumber() {
     int number;
@@ -178,7 +157,6 @@ void magicalNumber() {
 
     printf("Calcular si el Numero es Magico\n");
     printf("Digite el valor \n");
-
     number=validationMagico();
 
     char chain[100];
@@ -186,7 +164,6 @@ void magicalNumber() {
     int tamano=strlen(chain);
 
     vector(numbers, chain, tamano); //Agregar los digitos del número en un vector
-    //Ordena los digitos del vector, lo vueve a convertir en cadena luego en numero y los resta
     if(isMagicNumber(sortDescending(numbers, tamano),sortAscending(numbers, tamano), number)){
         printf("El numero %d es un Número Magico\n", number);
     }else{
@@ -211,7 +188,6 @@ int isMagicNumber(int numberD, int numberA, int number){
 }
 
 int sortAscending(int number[], int tamano) {
-    //printf("ordenar \n");
     for (int i = 0; i < tamano - 1; i++) {
         for (int j = i + 1; j < tamano; j++) {
             if (number[j] < number[i]) {
@@ -226,21 +202,17 @@ int sortAscending(int number[], int tamano) {
 
 int convertVector(int numbers[], int tamano){
     char cadena[30]="";
-
     for(int i=0; i<tamano; i++){
         numbers[i];
         char convNum[10];
         sprintf(convNum, "%d", numbers[i]);
         strcat(cadena, convNum);
     }
-    //  printf("%s\n",  cadena);
     int num = atoi(cadena);
-
     return num;
 }
 
 int sortDescending(int numberA[], int tamano){
-    // printf("ordenar \n");
     for (int i = 0; i < tamano-1; i++){
         for (int j = i + 1; j < tamano; j++){
             if(numberA[j]>numberA[i]){
@@ -253,24 +225,18 @@ int sortDescending(int numberA[], int tamano){
 
     return convertVector(numberA, tamano);
 }
+
 //4. Calculo IMC
-
 bool validacionReakGener( char number[]){
-
     for (int i = 0; i <strlen(number) ; ++i) {
         if (!(number[i]==49||number[i]==50)){
-
             printf("<---Digita solamente 1 o 2 ---->");
-
             return true;
         }
-
-
     }
     return false;
-
-
 }
+
 int validationGener(){
     char number [30];
     int value=0;
@@ -278,21 +244,17 @@ int validationGener(){
         scanf("%s",number);
     }while (validacionReakGener(number)==true);
     value=atoi(number);
-
     return  value;
-
 }
+
 void bodyMassIndex(){
     int weight, gender;
     double height;
-
     printf("Calculo del IMC\n");
     printf("Digite su peso en kg: \n");
-
-    weight=validations();
+    weight = validations();
     printf("Digite su estatura en cm: \n");
-
-    height=validations();
+    height = validations();
     printf("Digite '1' si es Mujer o '2' si es Hombre: \n");
 
     gender=validationGener();
@@ -301,9 +263,7 @@ void bodyMassIndex(){
 }
 
 char* processIMC (int gender, double IMC){
-
     switch (gender){
-
         case 1:
             if(IMC < 16){
                 return "Desnutrición";
@@ -351,7 +311,6 @@ double calculateIMC(int weigth, double height){
 }
 
 //5.Suma de Digitos
-
 void sumDigits(){
     int iniInterval=0;
     int endInterval=0;
@@ -366,7 +325,6 @@ void sumDigits(){
     printf("Digite el numero que desea excluir:\n");
     exclusiveDigit=validations();
     fflush(stdin);
-
 
     iniInterval<=endInterval?calculateSumDigits(iniInterval, endInterval, exclusiveDigit):printf("Lo siento el Intervalo Inicial debe ser menor\n");
     getchar();
@@ -393,24 +351,17 @@ void calculateSumDigits(int iniInterval, int endInterval, int exclusiveDigit){
 
 //7. Resultados de la prueba
 bool validationRealtest( char number[]){
-
-
     for (int i = 0; i < strlen(number); ++i) {
-
         if (!(number[i]==88||number[i]==79||number[i]==120||number[i]==111)){
-
             printf("<----Ingresa solo O || X---->\n");
             return true;
         }
-
     }
-
     return false;
 }
 
 
 void test (){
-
     printf("----Puntaje de prueba---- \n");
     char chain[30] ;
     printf("Digita la cadena por favor: \n");
@@ -419,7 +370,6 @@ void test (){
         scanf("%s", chain);
 
     }while (validationRealtest(chain)==true);
-
 
     printf("El resultado de la prueba dada es: %d\n",calculateTest(chain));
     getchar();
@@ -486,8 +436,7 @@ void fibonacciSeries(){
     getchar();
 }
 
-
-
+/*---------- MENU PRINCIPAL ----------*/
 void mainMenu(){
     int option;
     char temp[10];
